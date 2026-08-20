@@ -8,6 +8,8 @@
 
 در ویندوز فقط فایل `start.bat` را اجرا کنید. برنامه بدون Docker، Node.js، npm، pip install یا دانلود مدل، به‌صورت آفلاین روی `http://127.0.0.1:8000` اجرا می‌شود.
 
+`start.bat` ابتدا دیتاست کامل معنایی V3 را به‌صورت آفلاین از 6 بخش فشرده داخل `backend/app/data/semantic_bundle/` بازسازی می‌کند و بعد سرور بازی را بالا می‌آورد. فایل بازسازی‌شده همان دیتاست 165 هدفی نسخه نهایی پروژه است.
+
 ## رابط کاربری نهایی
 
 رابط کاربری نهایی V3 که با `start.bat` اجرا می‌شود داخل مسیر زیر قرار دارد:
@@ -59,11 +61,17 @@ contextro-fa/
 ├── README.md
 ├── README-RUN.md
 └── backend/
+    ├── prepare_semantic_data.py   # Rebuild exact V3 semantic dataset offline
     ├── lightweight_server.py
     ├── app/
-    │   ├── static/       # Final V3 UI
-    │   └── data/         # Persian semantic data / ontology / vocabulary
-    └── training/         # Benchmark and research/training assets
+    │   ├── static/                # Final V3 UI
+    │   └── data/
+    │       ├── semantic_bundle/   # Exact compressed final dataset
+    │       ├── semantic_ontology.json
+    │       ├── cross_relations.csv
+    │       ├── vocabulary.txt
+    │       └── daily_words.txt
+    └── training/                  # Benchmark and research/training assets
 ```
 
 ## Benchmark
