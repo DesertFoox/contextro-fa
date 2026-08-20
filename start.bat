@@ -31,6 +31,9 @@ set "RUNNER=python"
 goto :run
 
 :run
+echo Preparing final semantic dataset...
+%RUNNER% backend\prepare_semantic_data.py
+if not %errorlevel%==0 goto :failed
 echo Starting Contextro FA...
 echo.
 %RUNNER% backend\lightweight_server.py
@@ -48,7 +51,8 @@ exit /b 1
 :failed
 echo.
 echo ERROR: Contextro FA could not start.
-echo Try: %RUNNER% backend\lightweight_server.py
+echo Try: %RUNNER% backend\prepare_semantic_data.py
+ echo Then: %RUNNER% backend\lightweight_server.py
 echo.
 pause
 exit /b 1
