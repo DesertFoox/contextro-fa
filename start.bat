@@ -52,7 +52,7 @@ exit /b 1
 echo.
 echo ERROR: Contextro FA could not start.
 echo Try: %RUNNER% backend\prepare_semantic_data.py
- echo Then: %RUNNER% backend\lightweight_server.py
+echo Then: %RUNNER% backend\lightweight_server.py
 echo.
 pause
 exit /b 1
