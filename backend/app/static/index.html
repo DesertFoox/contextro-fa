@@ -1,1 +1,65 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contextro FA</title><link rel="stylesheet" href="/styles.css"></head><body><main class="wrap"><section class="hero"><span class="eyebrow">پروژه NLP فارسی</span><h1>Contextro <strong>FA</strong></h1><p>کلمه مخفی را با نزدیک‌شدن معنایی پیدا کن.</p><div class="stats"><div><b id="attempts">0</b><span>تلاش</span></div><div><b id="best">0.0</b><span>بهترین</span></div><div><b id="streak">0</b><span>Streak</span></div><div><b id="gameScore">0</b><span>Score</span></div></div></section><section class="panel"><form id="guessForm"><input id="guessInput" autocomplete="off" placeholder="مثلاً: دریا، دانشگاه، پزشک..."><button>حدس بزن</button></form><div class="actions"><button id="hintBtn" type="button">💡 راهنمایی</button><button id="giveUpBtn" type="button">🏳️ تسلیم</button><button id="nextBtn" type="button" hidden>⏭ کلمه بعدی</button></div><div id="hintBox" class="hint" hidden></div><div id="message" class="message"></div><div class="legend"><span>❄️ دور</span><span>🔥 نزدیک</span><span>🏆 جواب</span></div><div id="guesses" class="guesses"></div></section><section id="journeySection" class="panel"><h2>Semantic Journey</h2><div id="journey" class="journey"></div></section><section id="neighborsSection" class="panel" hidden><h2>نزدیک‌ترین کلمات معنایی</h2><div id="neighbors" class="neighbors"></div></section><section class="panel"><h2>🧠 AI Lab</h2><div id="lab" class="lab"></div></section></main><script src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contextro FA</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <span class="badge">پروژه NLP فارسی</span>
+      <h1>Contextro <b>FA</b></h1>
+      <p>کلمه مخفی را با نزدیک‌شدن معنایی پیدا کن.</p>
+      <div class="stats">
+        <span>تلاش <b id="guess-count">0</b></span>
+        <span>بهترین <b id="best-score">0.0</b></span>
+        <span>راند <b id="round-count">1</b></span>
+        <span>امتیاز <b id="total-score">0</b></span>
+        <span>استریک <b id="streak-count">0</b></span>
+      </div>
+    </section>
+
+    <form id="guess-form" class="guessBox">
+      <input id="word-input" placeholder="یک کلمه فارسی حدس بزن…" autocomplete="off" autofocus />
+      <button id="guess-button" type="submit">حدس بزن</button>
+    </form>
+
+    <div class="actions">
+      <button id="hint-button" class="hintButton" type="button">💡 راهنمایی <span id="hint-count">۳</span></button>
+      <button id="giveup-button" class="ghostButton" type="button">🏳️ تسلیم</button>
+      <button id="share-button" class="ghostButton" type="button">📤 اشتراک نتیجه</button>
+      <button id="lab-button" class="ghostButton" type="button">🧠 AI Lab</button>
+      <button id="next-button" class="nextButton hidden" type="button">⏭ کلمه بعدی</button>
+    </div>
+    <div id="hint" class="hint hidden"></div>
+    <div id="message" class="message hidden"></div>
+
+    <section class="legend">
+      <span>❄️ دور</span><span>🔥 نزدیک</span><span>🏆 جواب</span>
+    </section>
+
+    <section id="journey-card" class="panel hidden">
+      <div class="panelHead"><h2>مسیر معنایی تو</h2><small>هرچه نقطه به مرکز نزدیک‌تر باشد، حدس معنایی بهتری بوده.</small></div>
+      <div id="journey" class="journey"></div>
+    </section>
+
+    <section id="neighbors-card" class="panel hidden">
+      <div class="panelHead"><h2>نزدیک‌ترین همسایه‌های معنایی</h2><small>بعد از پایان راند نمایش داده می‌شود.</small></div>
+      <div id="neighbors" class="neighbors"></div>
+    </section>
+
+    <section id="history" class="list"></section>
+
+    <section id="lab-panel" class="panel hidden">
+      <div class="panelHead"><h2>AI Lab</h2><button id="close-lab" class="miniButton">بستن</button></div>
+      <div id="lab-content" class="labGrid"></div>
+      <p class="labNote">Rank روی کل واژگان محاسبه می‌شود؛ Proximity یک امتیاز کالیبره‌شده UX است و احتمال آماری نیست.</p>
+    </section>
+
+    <footer>Semantic v3 • رتبه‌بندی معنایی، Hint، Benchmark، تحلیل مسیر و امتیازدهی آفلاین</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
