@@ -1,0 +1,127 @@
+{
+  "benchmark_type": "internal semantic sanity benchmark",
+  "cases": 10,
+  "pairwise_order_accuracy": 0.975,
+  "results": [
+    {
+      "target": "دریا",
+      "positive_avg": 0.877,
+      "negative_avg": 0.218,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "اقیانوس": 2,
+        "ساحل": 3,
+        "موج": 4,
+        "آبی": 25
+      }
+    },
+    {
+      "target": "دانشگاه",
+      "positive_avg": 0.888,
+      "negative_avg": 0.036,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "دانشجو": 2,
+        "استاد": 3,
+        "دانشکده": 4,
+        "مدرسه": 23
+      }
+    },
+    {
+      "target": "پزشک",
+      "positive_avg": 0.897,
+      "negative_avg": 0.078,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "دکتر": 2,
+        "بیمارستان": 4,
+        "پرستار": 10,
+        "درمان": 6
+      }
+    },
+    {
+      "target": "فوتبال",
+      "positive_avg": 0.925,
+      "negative_avg": 0.26,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "ورزش": 2,
+        "توپ": 3,
+        "بازیکن": 5,
+        "تیم": 6
+      }
+    },
+    {
+      "target": "اینترنت",
+      "positive_avg": 0.92,
+      "negative_avg": 0.04,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "وب": 2,
+        "شبکه": 4,
+        "آنلاین": 5,
+        "سایت": 3
+      }
+    },
+    {
+      "target": "موسیقی",
+      "positive_avg": 0.924,
+      "negative_avg": 0.067,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "آهنگ": 2,
+        "ترانه": 4,
+        "خواننده": 5,
+        "ساز": 6
+      }
+    },
+    {
+      "target": "باران",
+      "positive_avg": 0.643,
+      "negative_avg": 0.068,
+      "pairwise_order_accuracy": 0.75,
+      "top_positive_ranks": {
+        "ابر": 3,
+        "قطره": 929,
+        "رگبار": 12,
+        "آسمان": 14
+      }
+    },
+    {
+      "target": "بانک",
+      "positive_avg": 0.92,
+      "negative_avg": 0.057,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "پول": 2,
+        "حساب": 3,
+        "کارت": 4,
+        "پرداخت": 5
+      }
+    },
+    {
+      "target": "سینما",
+      "positive_avg": 0.92,
+      "negative_avg": 0.085,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "فیلم": 2,
+        "بازیگر": 3,
+        "کارگردان": 4,
+        "سریال": 5
+      }
+    },
+    {
+      "target": "خانه",
+      "positive_avg": 0.894,
+      "negative_avg": 0.114,
+      "pairwise_order_accuracy": 1.0,
+      "top_positive_ranks": {
+        "منزل": 2,
+        "اتاق": 3,
+        "آشپزخانه": 4,
+        "ساختمان": 19
+      }
+    }
+  ]
+}
